@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@300;400;600&family=Oswald:wght@300&family=Roboto+Condensed&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+    
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Wellness & Spa</title>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+        <h1 class="headingOne">Wellness <span class="head"> & </span> Spa</h1>
+        <img src="img/spa.jpg" width="100%" alt="Wellness photo">
+        <h2 class="headingTwo"><u>Dobrodošli</u></h2>
+        <p>Izaberite paket koji želite danas! </p>
+        <p>Popunite formular sa podacima, a mi ćemo Vas u što kraćem roku obavestiti o prvim slobodnim terminima! </p>
+    </header>
+    <main>
+        <div class="col-md-4 col-md-offset-4">
+        <form role="form" action="next.html" class="form" onsubmit="return proveraForme(this)">
+            
+            <div class="form-group">
+                <label class="lab1" for="ime">Ime:</label>
+                <input type="text" class="form-control " id="ime" name="ime">
+            </div>
+            <div  class="form-group">
+                <label class="lab1" for="prz">Prezime:</label>
+                <input type="text" class="form-control" id="prz" name="prezime">
+            </div>
+            <div  class="form-group">
+                <label class="lab1" for="jmbg">JMBG: </label>
+                <input type="text" id="jmbg" class="form-control" name="jmbg">
+            </div>
+            <div  class="form-group">
+                <label class="lab1" for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group" >
+                <label for="pak" class="lab1" class="form-check-label">Izaberite paket: </label>
+                <input type="checkbox" id="paket" class="form-check-input" onchange="obojiPozadinu()" onclick="omoguciSelect()">
+            </div>
+            <div class="form-group">
+            <label for="paketi" class="lab1">Paketi:</label>
+            <select name="paketi" id="paketi" class="form-control" disabled onchange="promeniBoju()">
+                
+                <option  value="1" class="option">Srebrni paket</option>
+                <option value="2" class="option" >Zlatni paket</option>
+                <option value="3" class="option" >Platinum paket</option>
+                
+            </select>
+        </div>
+        <div class="col-md-12 text-center">
+        <button type="submit" class="btn"  id="submitbtn" >Pošalji</button>
+    </div>
+   
+
+        </form>
+    </div>
+    </main>
+</div>
+   <script src="script.js"></script>
+  
+    
+</body>
+</html>

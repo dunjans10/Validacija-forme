@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@300;400;600&family=Oswald:wght@300&family=Roboto+Condensed&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Wellness & Spa - potvrda</title>
+
+    <script>
+
+        window.onload = function(){
+            var search = window.location.search;
+
+            if(!search){
+                return;
+            }
+
+            var items = search.substring(1).split("&");
+            console.log(items);
+            
+            var obj = {};
+
+            for(var i in items){
+                var item = items[i].split("=");
+                obj[item[0]] = item[1];
+            }
+
+            var pozdrav = document.getElementById("pozdrav_korisniku");
+            pozdrav.innerHTML = `Pozdrav, <span class="drugaBoja">${obj.ime} ${obj.prezime}</span> ! <br>
+            <br>
+            Hvala što se izabrali naš Wellness & Spa. <br>
+            <br>
+            Sigurni smo da ćete biti veoma zadovoljni sa uslugom! `;
+
+            var paket = document.getElementById("izabraniPaket");
+            var odabraniPaket = obj.paketi;
+
+            paket.innerHTML = `Izabrali ste <u class="underline">${nadjiPaket(obj.paketi)}<u>!`;
+
+            function nadjiPaket(vrednost){
+                if(vrednost == "1"){
+                    return "Srebrni paket";
+                }else if(vrednost == "2"){
+                    return "Zlatni paket"
+                }else{
+                    return "Platinum paket" 
+                }
+            }
+             
+        }
+
+    </script>
+</head>
+<body>
+    <div class="pozdrav">
+        <p id="pozdrav_korisniku"></p>
+    </div>
+    <div class="paket">
+        <p id="izabraniPaket"></p>
+    </div>
+    <img style="padding-top:1em;" src="img/wellness.jpg" width="100%" alt="Wellness photo">
+</body>
+</html>

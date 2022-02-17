@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #cdb4db;
+    color:#343a40;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.header{
+    text-align: center;
+    padding-bottom: 2.2em;
+}
+
+.headingOne{
+    padding: 1.2em 0;
+}
+
+.head{
+    color: #9b5de5;
+    font-size: 1.6em;
+}
+
+.headingTwo{
+    color: #9b5de5;
+}
+
+#submitbtn{
+    margin: 1.2em 0;
+}
+
+p{
+    font-size: 1.4em;
+}
+
+label{
+    font-size: 1.2em;
+}
+
+.btn{
+    background-color: #9b5de5;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+}
+
+.btn:hover{
+    background-color: #fff;
+    color:#9b5de5;
+    font-weight: 700;
+    
+}
+
+#paket{
+    width: 1.8em;
+    height: 1.8em;
+    cursor: pointer;
+    
+}
+
+.option {
+    background-color: #9b5de5;
+    color: white;
+}
+
+.pozdrav{
+    padding: 1.2em;
+    text-align: center;
+    padding-bottom: 2.2em;
+}
+
+.paket{
+    text-align: center;
+    cursor: none;
+}
+
+.drugaBoja{
+    color:#9b5de5;
+    font-size: 1.4em;
+}
+
+.underline{
+    color: #9b5de5;
+}
